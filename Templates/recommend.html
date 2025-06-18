@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('recommend_ui') }}" class="active">Recommend</a>
+        <a href="{{ url_for('index') }}#top-books">Top 10 Books</a>
+    </div>
+
+    <div class="form-container">
+        <form action="/recommend_books" method="post">
+            <h2>Get Book Recommendations</h2>
+            <input type="text" name="user_input" placeholder="What's your favourite book?">
+            <input type="submit" value="Find" class="submit_btn">
+        </form>
+    </div>
+
+
+    <div id='top-books' class="books-section">
+        <h2>Based on your Interest Books!</h2>
+        <div class="book-list">
+
+            {% if data %}
+
+                {% for i in data %}
+                    <div class="book">
+                        <img src="{{ i[2] }}" alt="Book name">
+                        <h3>{{i[0]}}</h3>
+                        <p>{{i[1]}}</p>
+                    </div>
+                {% endfor %}
+            
+            {% endif%}
+           
+        </div>
+    </div>
+
+</body>
+</html>

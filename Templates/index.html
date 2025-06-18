@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('index') }}" class="active">Home</a>
+        <a href="{{ url_for('recommend_ui') }}">Recommend</a>
+        <a href="{{ url_for('index') }}#top-books">Top 10 Books</a>
+    </div>
+
+    <div class="intro">
+        <h1>Book Recommender! </h1>
+        <p>This website provides recommendations based on your preferences and interests. Navigate through the Home and Recommend sections to explore more!</p>
+        <p>Our platform is designed to help you find the best options, tailored just for you. Whether you're looking for personalized suggestions, top-rated choices, or trending items, we've got you covered.</p>
+        <p>Join us and start exploring now. Your journey to discovering amazing recommendations begins here!</p>
+        <button class="btn" onclick="location.href='#top-books'">Top 10 Books</button>
+        <a class="btn" href="{{ url_for('recommend_ui') }}">Recommend Me</a>
+    </div>
+
+    <div id='top-books' class="books-section">
+        <h2>Top 10 Books</h2>
+        <div class="book-list">
+
+            {% for i in range(book_name|length) %}
+                <div class="book">
+                    <img src="{{ image[i] }}" alt="Book img">
+                    <h3>{{ book_name[i] }}</h3>
+                    <p>Author: {{ author[i] }}</p>
+                    <p>Votes: {{ votes[i] }}</p>
+                    <p>Rating: {{ rating[i] }}</p>
+                </div>
+            {% endfor %}
+           
+        </div>
+    </div>
+    
+   
+    
+</body>
+</html>

@@ -1,0 +1,137 @@
+body {
+    font-family: "Winky Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    background: url('/static/1.avif') no-repeat center center fixed;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark background for better text visibility */
+    background-blend-mode: darken;
+
+    
+}
+.navbar {
+    background: rgba(51, 51, 51, 0.6);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    padding: 10px 20px;
+    margin: 10px auto;
+    width: 95%;
+    z-index: 1000;
+    border-radius: 40px;
+}
+.navbar a {
+    float: left;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    margin-left: 20px;
+    padding: 6px 16px;
+    text-decoration: none;
+    font-size: 18px;
+}
+.navbar a:hover {
+    color: rgb(211, 151, 0);
+    transform: scale(1.1);
+    font-size: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.intro {
+    padding: 50px;
+    margin: 50px 50px;
+    width: 60%;
+    text-align: left;
+    color: white;
+}
+
+.intro h1{
+    font-size: 50px;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-color: #333436;
+    color: white;
+    text-decoration: none;
+}
+.btn:hover {
+    background-color: #919191;
+    color: #232323;
+}
+
+
+
+
+/* top 10 books section  */
+
+.books-section {
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+}
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.book {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+.book:hover {
+    transform: scale(1.1);
+}
+
+.book img {
+    width: 100px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+/* user input for recomendation section  */
+
+.form-container {
+    text-align: center;
+    padding: 50px;
+    color: white;
+}
+
+.form-container form h2{
+    font-size: 45px;
+}
+.form-container form input {
+    padding: 10px;
+    font-size: 16px;
+    width: 80%;
+    display: block;
+    margin: 10px auto;
+}
+.form-container form .submit_btn {
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #4f3625;
+    color: white;
+    border-radius: 5px;
+    display: block;
+    width: 30%;
+    margin: 10px auto;
+}
+.form-container form .submit_btn:hover {
+    background-color: #7e563b;;
+    color: white;
+}
