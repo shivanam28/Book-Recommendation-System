@@ -39,7 +39,7 @@ The dataset used for this project is available on Kaggle:
 ## 🖼️ Screenshots
 
 ### Home Page
-![Home Page]([[snapshots/](https://github.com/shivanam28/Book-Recommendation-System/blob/main/1.png)](https://github.com/shivanam28/Book-Recommendation-System/blob/b8cbd817e7073b2317ede029a9ba798b41d991c7/1.png))
+![Home Page](https://github.com/shivanam28/Book-Recommendation-System/blob/main/1.png?raw=true)
 
 ### Popular Books Section
 ![Popular Books]([[screenshots/popular_books.png](https://github.com/shivanam28/Book-Recommendation-System/blob/main/2.png)](https://github.com/shivanam28/Book-Recommendation-System/blob/b8cbd817e7073b2317ede029a9ba798b41d991c7/2.png))
